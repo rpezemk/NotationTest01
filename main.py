@@ -16,13 +16,13 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.toolBar: QToolBar = None
         self.setWindowTitle("PyQt5 Canvas with Clickable Items and Top Pane")
+        self.create_menu()
         self.graphics_scene = QGraphicsScene(self)
         self.graphics_scene.setSceneRect(0, 0, 400, 300)
         self.graphics_view = QGraphicsView(self.graphics_scene, self)
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
         self.vertical_layout = QVBoxLayout(central_widget)
-        self.create_menu()
         self.vertical_layout.addWidget(self.toolBar)
         self.vertical_layout.addWidget(self.graphics_view)
 
@@ -37,6 +37,7 @@ class MainWindow(QMainWindow):
         
     def open_method(self):
         pass
+    
     def save_method(self):
         pass
     
