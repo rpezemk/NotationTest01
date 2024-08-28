@@ -61,12 +61,12 @@ class MainWindow(QMainWindow):
             
     def draw_note(self, t):
         # Create a red circle
-        noteCtrl = NoteControl(QRectF(t[0], t[1], 100, 100))
+        noteCtrl = NoteControl(QRectF(t[0], t[1], 10, 10))
         noteCtrl.mousePressEvent = self.item_clicked
         self.graphics_scene.addItem(noteCtrl)   
 
 num_tuples = 1000
-tuples_list = TestHelper.gimme_sample_notes(num_tuples)
+tuples_list = TestHelper.gimme_sample_notes(num_tuples, 500, 500)
     
 app = QApplication(sys.argv)
 notepadApp = MainWindow()
