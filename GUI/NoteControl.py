@@ -1,5 +1,8 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QGraphicsView, QGraphicsScene, QGraphicsEllipseItem, QGraphicsRectItem, QMainWindow, QVBoxLayout, QHBoxLayout, QPushButton, QWidget, QToolBar, QAction
+from PyQt5.QtWidgets import (
+    QApplication, QGraphicsView, QGraphicsScene, QGraphicsEllipseItem,
+    QGraphicsRectItem, QMainWindow, QVBoxLayout, QHBoxLayout, 
+    QPushButton, QWidget, QToolBar, QAction, QMenu)
 from PyQt5.QtCore import QRectF, Qt
 from PyQt5.QtGui import QBrush, QPen, QColor
 
