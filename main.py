@@ -8,8 +8,10 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import QRectF, Qt
 from PyQt5.QtGui import QBrush, QPen, QColor
 from GUI.NoteControl import NoteControl
+
 from Helpers.TestHelper import TestHelper
 from Helpers.ActionHelper import ActionHelper
+from test import CustomPanel
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -60,7 +62,6 @@ class MainWindow(QMainWindow):
             self.draw_note(pos)
             
     def draw_note(self, t):
-        # Create a red circle
         noteCtrl = NoteControl(QRectF(t[0], t[1], 10, 10))
         noteCtrl.mousePressEvent = self.item_clicked
         self.graphics_scene.addItem(noteCtrl)   
